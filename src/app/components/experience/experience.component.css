@@ -1,0 +1,28 @@
+.exp-container {
+  margin: 15px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+}
+
+.exp-article {
+  border: 1px grey solid;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+.img-work {
+  max-width: 150px;
+}
+@media screen and (max-width: 650px) {
+  .img-work {
+    max-width: 75px;
+  }
+
+}

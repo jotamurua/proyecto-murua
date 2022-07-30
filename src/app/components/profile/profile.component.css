@@ -2,11 +2,6 @@
   margin: 15px;
   border: 1px grey solid;
   border-radius: 5px;
-  display: grid;
-  grid-template-columns: 0.5fr repeat(4, 1fr);
-  grid-template-rows: 1fr repeat(2, 0.5fr) repeat(2, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   display: flex;
   flex-direction: column;
 }
@@ -21,9 +16,14 @@
 .info {
   grid-area: 3 / 2 / 5 / 6;
   margin-top: 50px;
+  display: flex;
 }
 .info h1, h3, h5{
   font-size: medium;
+}
+.name{
+ min-width: 250px;
+ padding: 10px;
 }
 .profile {
   grid-area: 2 / 1 / 4 / 3;
@@ -41,15 +41,16 @@
 
 }
 
-@media screen and (max-width: 960px) {
-  .fotoperfil {
-    align-self: center;
-  }
+@media screen and (max-width: 650px) {
+.info {
+  flex-direction: column;
+}
 
 }
+
+
 @media screen and (max-width: 450px) {
   .fotoperfil {
-    align-self: center;
     max-width: 150px;
   }
 
