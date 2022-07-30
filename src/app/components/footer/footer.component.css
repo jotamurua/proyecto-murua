@@ -1,0 +1,19 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #1f1f24;
+  color: white;
+  justify-content: space-between;
+    align-items: flex-start;
+
+}
+footer p {
+  color: grey;
+  font-size: small;
+}
+.redes, footer p {
+  margin: 10px;
+}
+.redes i {
+  padding: 10px;
+}

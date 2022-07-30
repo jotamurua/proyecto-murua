@@ -1,0 +1,32 @@
+.proj-container {
+  margin: 15px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 15px;
+}
+
+.proj-article {
+  border: 1px grey solid;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 15px;
+}
+.img-proj {
+  max-width: 150px;
+}
+.proj-data, .proj-data a {
+  margin: 5px;
+}
+
+@media screen and (max-width: 650px) {
+  .img-proj {
+    max-width: 75px;
+  }
+
+}
