@@ -18,44 +18,52 @@
   margin-top: 50px;
   display: flex;
 }
-.fa-solid, .fa-brands {
+.fa-solid,
+.fa-brands {
   margin: 10px;
 }
-.name{
- min-width: 250px;
- padding: 10px;
+.name {
+  min-width: 250px;
+  padding: 10px;
 }
 .profile {
   grid-area: 2 / 1 / 4 / 3;
   max-width: 0px;
   max-height: 0px;
   margin-left: 10px;
-
 }
 .fotoperfil {
   max-width: 200px;
   border-radius: 50%;
-  margin: 45px 15px  ;
+  /* margin: 45px 15px  ;
+  position: absolute;
+  align-self: flex-start; */
+}
+.fotoperfilcontainer {
+  margin: 0px 15px 375px;
   position: absolute;
   align-self: flex-start;
-
+  top: 115px;
 }
 
 @media screen and (max-width: 650px) {
-.info {
-  flex-direction: column;
+  .info {
+    flex-direction: column;
+  }
+  .icons-editdelete {
+    display: flex;
+    flex-direction: row;
+  }
+ .edit-banner {
+  float: right;
+ }
+ .fotoperfilcontainer{
+  top: 125px
+ }
 }
-.icons-editdelete {
-  display: flex;
-  flex-direction: row;
-}
-
-}
-
 
 @media screen and (max-width: 450px) {
   .fotoperfil {
     max-width: 150px;
   }
-
 }
