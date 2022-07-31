@@ -7,22 +7,26 @@
   padding: 5px 15px;
 }
 
+
 .exp-article {
   border: 1px grey solid;
   margin: 5px;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  justify-content: flex-end;
   padding-left: 15px;
+}
+.fa-solid, .fa-brands {
+  margin: 10px;
 }
 .img-work {
   max-width: 150px;
+  align-self: center;
 }
 @media screen and (max-width: 650px) {
   .img-work {
     max-width: 75px;
   }
-
 }

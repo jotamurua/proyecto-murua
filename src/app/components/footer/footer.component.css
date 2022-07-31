@@ -9,7 +9,7 @@ footer {
 }
 footer p {
   color: grey;
-  font-size: small;
+  font-size: 10px;
 }
 .redes, footer p {
   margin: 10px;

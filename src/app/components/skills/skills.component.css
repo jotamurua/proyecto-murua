@@ -6,3 +6,18 @@
   flex-direction: column;
   padding: 5px 15px;
 }
+.skill-article {
+  display: flex;
+  flex-direction: column;
+}
+.skill-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.boton-edit, .boton-delete{
+  margin: 5px;
+}
+.boton-edit i, .boton-delete i{
+  margin: 10px;
+}

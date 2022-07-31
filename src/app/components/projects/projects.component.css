@@ -12,15 +12,20 @@
   margin: 5px;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  justify-content: flex-end;
   padding-left: 15px;
 }
 .img-proj {
   max-width: 150px;
+  align-self: center;
 }
-.proj-data, .proj-data a {
+.boton-delete i, .boton-edit i {
+  margin: 10px;
+}
+.proj-data,
+.proj-data a {
   margin: 5px;
 }
 
@@ -28,5 +33,4 @@
   .img-proj {
     max-width: 75px;
   }
-
 }

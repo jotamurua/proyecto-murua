@@ -12,17 +12,23 @@
   margin: 5px;
   border-radius: 5px;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  justify-content: flex-end;
   padding-left: 15px;
 }
 .img-educ {
   max-width: 150px;
+  align-self: center;
 }
+
+.fa-solid, .fa-brands {
+  margin: 10px;
+}
+
+
 @media screen and (max-width: 650px) {
   .img-educ {
     max-width: 75px;
   }
-
 }

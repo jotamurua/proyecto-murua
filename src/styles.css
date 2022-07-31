@@ -3,3 +3,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+.icons-editdelete{
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.boton-edit{
+  border-radius: 50%;
+  opacity: 0.6;
+  transition: all 0.1s ease;
+}
+.boton-delete{
+  border-radius: 50%;
+  opacity: 0.6;
+  background-color: rgb(212, 86, 86);
+  transition: all 0.1s ease;
+}
+.boton-edit:hover, .boton-delete:hover{
+  opacity: 1;
+}
+

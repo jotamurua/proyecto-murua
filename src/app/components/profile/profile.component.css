@@ -18,8 +18,8 @@
   margin-top: 50px;
   display: flex;
 }
-.info h1, h3, h5{
-  font-size: medium;
+.fa-solid, .fa-brands {
+  margin: 10px;
 }
 .name{
  min-width: 250px;
@@ -44,6 +44,10 @@
 @media screen and (max-width: 650px) {
 .info {
   flex-direction: column;
+}
+.icons-editdelete {
+  display: flex;
+  flex-direction: row;
 }
 
 }
