@@ -15,21 +15,24 @@
   }],
   "education": [{
     "career": "1 career",
-    "yearsfrom": "from-to",
-    "yearsto": "to",
-    "description": "lorem"
+    "institution": "institution",
+    "yearsfrom": "1999",
+    "yearsto": "2000",
+    "institutionImg": ""
   },
   {
     "career": "2 career",
-    "yearsfrom": "from-to",
-    "yearsto": "to",
-    "description": "lorem"
+    "institution": "institution",
+    "yearsfrom": "1999",
+    "yearsto": "2000",
+    "institutionImg": ""
   },
   {
     "career": "3 career",
-    "yearsfrom": "from-to",
-    "yearsto": "to",
-    "description": "lorem"
+    "institution": "institution",
+    "yearsfrom": "1999",
+    "yearsto": "2000",
+    "institutionImg": ""
   }],
   "skills": [{
     "skill": "HTML",

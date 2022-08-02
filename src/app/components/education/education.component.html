@@ -1,17 +1,17 @@
 <section class="educ-container">
   <h5> Educación</h5>
-  <article class="educ-article">
+  <article class="educ-article" *ngFor="let educ of educArticle">
     <div class="icons-editdelete">
       <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
       <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
     </div>
     <div class="educ-data">
-      <h6>titulo</h6>
-      <p>institución</p>
-      <p>periodo</p>
+      <h6>{{educ.career}}</h6>
+      <p>{{educ.institution}}</p>
+      <p>from {{educ.yearsfrom}} to {{educ.yearsto}}</p>
     </div>
-    <img
-      src="https://png.pngtree.com/template/20191014/ourlarge/pngtree-real-estate-business-logo-template-building-property-development-and-construction-logo-image_317796.jpg"
+    <img *ngIf="educ.institutionImg"
+      [src]="educ.institutionImg"
       alt="logo" class="img-educ img-fluid img-responsive" />
   </article>
 </section>
