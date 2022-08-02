@@ -1,21 +1,21 @@
 nav {
   display: flex;
-    background-color: #1f1f24;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+  background-color: #1f1f24;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
 }
-.logo-argprog img{
+.logo-argprog img {
   max-width: 100px;
 }
 .redes-login {
   display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    color: white;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  color: white;
 }
 .redes {
   margin: 10px;

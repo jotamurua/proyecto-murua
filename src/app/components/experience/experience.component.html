@@ -1,14 +1,14 @@
 <section class="exp-container">
   <h5> Experiencia</h5>
-  <article class="exp-article">
+  <article class="exp-article" *ngFor="let exp of expArticle">
     <div class="icons-editdelete">
       <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
       <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
     </div>
     <div>
-      <h6>titulo del puesto</h6>
+      <h6>{{exp.title}}</h6>
       <p>periodo</p>
-      <p>actividades</p>
+      <p>{{exp.description}}</p>
     </div>
     <img
       src="https://png.pngtree.com/template/20191014/ourlarge/pngtree-real-estate-business-logo-template-building-property-development-and-construction-logo-image_317796.jpg"

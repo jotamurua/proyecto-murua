@@ -22,4 +22,9 @@
 .boton-edit:hover, .boton-delete:hover{
   opacity: 1;
 }
+.redes a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.2s ease;
+}
 
