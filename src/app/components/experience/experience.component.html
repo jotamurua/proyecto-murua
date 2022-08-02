@@ -7,11 +7,11 @@
     </div>
     <div>
       <h6>{{exp.title}}</h6>
-      <p>periodo</p>
+      <p>{{exp.yearsfrom}} to {{exp.yearsto}}</p>
       <p>{{exp.description}}</p>
     </div>
-    <img
-      src="https://png.pngtree.com/template/20191014/ourlarge/pngtree-real-estate-business-logo-template-building-property-development-and-construction-logo-image_317796.jpg"
+    <img *ngIf="exp.enterpriseImg"
+    [src]="exp.enterpriseImg"
       alt="logo" class="img-work img-fluid img-responsive" />
   </article>
 </section>

@@ -8,9 +8,10 @@
   "experience": [
     {
     "title": "1 work",
-    "yearsfrom": "from-to",
-    "yearsto": "to",
-    "description": "lorem"
+    "yearsfrom": "1999",
+    "yearsto": "2000",
+    "description": "lorem",
+    "enterpriseImg" : "https://png.pngtree.com/template/20191014/ourlarge/pngtree-real-estate-business-logo-template-building-property-development-and-construction-logo-image_317796.jpg"
   }],
   "education": [{
     "career": "1 career",
