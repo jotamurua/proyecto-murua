@@ -1,19 +1,19 @@
 <section class="proj-container">
   <h5> Proyectos</h5>
-  <article class="proj-article">
+  <article class="proj-article" *ngFor="let project of projectsArticle">
     <div class="icons-editdelete">
       <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
       <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
     </div>
-    <div class="proj-data">
-      <h6>titulo del proyecto</h6>
-      <p>periodo</p>
-      <p>data</p>
-      <a><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-brands fa-github"></i></button></a>
-      <a><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-solid fa-globe"></i></button></a>
+    <div class="proj-data" >
+      <h6>{{project.title}}</h6>
+      <p> from {{project.timelapseFrom}} to {{project.timelapseTo}}</p>
+      <p>{{project.description}}</p>
+      <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener noreferrer"><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-brands fa-github"></i></button></a>
+      <a *ngIf="project.deploy" [href]="project.deploy" target="_blank" rel="noopener noreferrer"><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-solid fa-globe"></i></button></a>
     </div>
     <img
-      src="https://png.pngtree.com/template/20191014/ourlarge/pngtree-real-estate-business-logo-template-building-property-development-and-construction-logo-image_317796.jpg"
+      [src]="project.img"
       alt="logo" class="img-proj img-fluid img-responsive" />
   </article>
 </section>
