@@ -1,17 +1,20 @@
 <section class="exp-container">
   <h5> Experiencia</h5>
-  <article class="exp-article" *ngFor="let exp of expArticle">
-    <div class="icons-editdelete">
-      <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
-      <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
+  <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged"> Agregar exp</button>
+  <article class="exp-article" *ngFor="let Experience of expe">
+    <div class="icons-editdelete" *ngIf="isLogged">
+      <button routerLink="/editexp/{{Experience.id}}" type="button" class="boton-edit"><i
+            class="fa-solid fa-pen"></i></button>
+      <a><button type="button" class="boton-delete" (click)="delete(Experience.id)"><i
+            class="fa-solid fa-trash-can"></i></button></a>
     </div>
     <div>
-      <h6>{{exp.title}}</h6>
-      <p>{{exp.yearsfrom}} to {{exp.yearsto}}</p>
-      <p>{{exp.description}}</p>
+      <h6>{{Experience.nombreE}}</h6>
+      <!-- <p>{{Experience.yearsfrom}} to {{Experience.yearsto}}</p> -->
+      <p>{{Experience.descripcionE}}</p>
     </div>
-    <img *ngIf="exp.enterpriseImg"
-    [src]="exp.enterpriseImg"
-      alt="logo" class="img-work img-fluid img-responsive" />
+    <!-- <img *ngIf="Experience.enterpriseImg"
+    [src]="Experience.enterpriseImg"
+      alt="logo" class="img-work img-fluid img-responsive" /> -->
   </article>
 </section>

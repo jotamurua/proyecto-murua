@@ -10,10 +10,10 @@
       <a href="https://api.whatsapp.com/send?phone=5493425212930" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
       <a href="https://github.com/jotamurua" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
     </div>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" *ngIf="login" (click)="login=!login">
+    <button *ngIf="!isLogged" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" (click)="login()">
       <i class="fa-regular fa-user"></i>
     </button>
-    <button *ngIf="!login" type="button" class="btn btn-danger" (click)="login=!login">
+    <button  *ngIf="isLogged" type="button" class="btn btn-danger" (click)="onLogOut()">
       <i class="fa-solid fa-circle-xmark"></i>
     </button>
   </div>

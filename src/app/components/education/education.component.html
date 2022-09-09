@@ -1,17 +1,20 @@
-<section class="educ-container">
+<section class="exp-container">
   <h5> Educación</h5>
-  <article class="educ-article" *ngFor="let educ of educArticle">
-    <div class="icons-editdelete">
-      <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
-      <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
+  <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged"> Agregar educ</button>
+  <article class="exp-article" *ngFor="let Education of educacion">
+    <div class="icons-editdelete" *ngIf="isLogged">
+      <a><button routerLink="/editedu/{{Education.id}}" type="button" class="boton-edit"><i
+            class="fa-solid fa-pen"></i></button></a>
+      <a><button type="button" class="boton-delete" (click)="delete(Education.id)"><i
+            class="fa-solid fa-trash-can"></i></button></a>
     </div>
-    <div class="educ-data">
-      <h6>{{educ.career}}</h6>
-      <p>{{educ.institution}}</p>
-      <p>from {{educ.yearsfrom}} to {{educ.yearsto}}</p>
+    <div>
+      <h6>{{Education.nombreE}}</h6>
+      <!-- <p>{{Education.yearsfrom}} to {{Education.yearsto}}</p> -->
+      <p>{{Education.descripcionE}}</p>
     </div>
-    <img *ngIf="educ.institutionImg"
-      [src]="educ.institutionImg"
-      alt="logo" class="img-educ img-fluid img-responsive" />
+    <!-- <img *ngIf="Education.enterpriseImg"
+    [src]="Education.enterpriseImg"
+      alt="logo" class="img-work img-fluid img-responsive" /> -->
   </article>
 </section>

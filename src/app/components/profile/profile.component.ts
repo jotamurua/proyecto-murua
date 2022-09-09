@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/services/portfolio.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,15 +9,15 @@ import { PortfolioService } from 'src/app/services/portfolio.service';
 })
 export class ProfileComponent implements OnInit {
 
-  miPortfolio:any;
+  persona: persona = new persona("","","", "", "", "", "");
 
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.miPortfolio=data;
-    });
+    this.personaService.getPersona().subscribe( data => {
+      this.persona = data
+    })
   }
 
 }

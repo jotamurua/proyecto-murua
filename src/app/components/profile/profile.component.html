@@ -2,13 +2,13 @@
   <div class="banner">
     <div>
       <img
-        [src]="miPortfolio.backImage"
+        [src]="persona.banner"
         class="img-banner img-fluid img-responsive" />
       <button type="button" class="edit-banner boton-edit"><i class="fa-solid fa-pen"></i></button>
     </div>
     <div class="fotoperfilcontainer">
       <img
-        [src]="miPortfolio.image"
+        [src]="persona.img"
         class="fotoperfil img-fluid img-responsive" />
       <button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button>
     </div>
@@ -16,18 +16,18 @@
   <div class="info">
     <div class="name">
       <h3>
-        {{miPortfolio.name}}
+        {{persona.nombre}} {{persona.apellido}}
       </h3>
       <p>
-        {{miPortfolio.location}}
+        {{persona.ubicacion}}
       <p>
     </div>
     <div>
       <h6>
-        {{miPortfolio.title}}
+        {{persona.titulo}}
       </h6>
       <p>
-        {{miPortfolio.about}}
+        {{persona.acercade}}
       </p>
     </div>
     <div class="icons-editdelete">

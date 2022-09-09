@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -11,8 +11,14 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { PortfolioService } from './services/portfolio.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './components/home/home.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { EditExperienceComponent } from './components/experience/edit-experience.component';
+import { EditeducationComponent } from './components/education/editeducation.component';
+import { NewEducationComponent } from './components/education/neweducation.component';
+import { NewExperienciaComponent } from './components/experience/new-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +30,23 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsComponent,
     ProjectsComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    EditExperienceComponent,
+    NewEducationComponent,
+    EditeducationComponent,
+    NewExperienciaComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
