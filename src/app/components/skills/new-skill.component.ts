@@ -10,7 +10,7 @@ import { SkillService } from 'src/app/service/skill.service';
 })
 export class NewSkillComponent implements OnInit {
   nombre: string;
-  porcentaje: string;
+  porcentaje: number;
   constructor(private skillS: SkillService, private router:Router) { }
 
   ngOnInit(): void {

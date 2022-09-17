@@ -8,8 +8,8 @@
   <article class="skill-article" *ngFor="let skill of skill">
     <div class="skill-description">
       <h6>{{skill.nombre}}</h6>
-      <a><button type="button" routerLink="/editskill/{{skill.id}}" class="boton-edit"><i class="fa-solid fa-pen" *ngIf="isLogged"></i></button></a>
-      <a><button type="button"(click)="delete(skill.id)" class="boton-delete"><i class="fa-solid fa-trash-can" *ngIf="isLogged"></i></button></a>
+      <button type="button" routerLink="/editskill/{{skill.id}}" class="boton-edit" *ngIf="isLogged"><i class="fa-solid fa-pen" ></i></button>
+      <button type="button"(click)="delete(skill.id)" class="boton-delete" *ngIf="isLogged"><i class="fa-solid fa-trash-can" ></i></button>
     </div>
     <div class="progress">
       <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{skill.porcentaje}}%"
