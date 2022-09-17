@@ -27,4 +27,15 @@
   color: white;
   transition: all 0.2s ease;
 }
+.section-header {
+  display: flex;
+  align-items: center;
+}
+.section-header button {
+  margin-left: 10px;
+  border-radius: 100%;
+}
+.section-header button i {
+  font-size: small;
+}
 

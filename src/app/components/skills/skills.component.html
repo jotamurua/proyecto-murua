@@ -1,14 +1,19 @@
 <section class="skill-container">
-  <h5>Skills </h5>
-  <article class="skill-article" *ngFor="let skill of skillsArticle">
+  <div class="section-header">
+
+    <h5>Skills </h5>
+    <button type="button" class="" routerLink="/nuevaskill" *ngIf="isLogged"> <i
+        class="fa-solid fa-plus"></i> </button>
+  </div>
+  <article class="skill-article" *ngFor="let skill of skill">
     <div class="skill-description">
-      <h6>{{skill.skill}}</h6>
-      <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
-      <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
+      <h6>{{skill.nombre}}</h6>
+      <a><button type="button" routerLink="/editskill/{{skill.id}}" class="boton-edit"><i class="fa-solid fa-pen" *ngIf="isLogged"></i></button></a>
+      <a><button type="button"(click)="delete(skill.id)" class="boton-delete"><i class="fa-solid fa-trash-can" *ngIf="isLogged"></i></button></a>
     </div>
     <div class="progress">
-      <div class="progress-bar progress-bar-striped" role="progressbar" [style.width]="skill.progress" aria-valuenow=10
-        aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: {{skill.porcentaje}}%"
+        aria-valuenow=10 aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </article>
 </section>

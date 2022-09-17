@@ -1,6 +1,10 @@
 <section class="exp-container">
-  <h5> Experiencia</h5>
-  <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged"> Agregar exp</button>
+  <div class="section-header">
+
+    <h5> Experiencia</h5>
+    <button type="button" class="" routerLink="/nuevaexp" *ngIf="isLogged"> <i
+          class="fa-solid fa-plus"></i></button>
+  </div>
   <article class="exp-article" *ngFor="let Experience of expe">
     <div class="icons-editdelete" *ngIf="isLogged">
       <button routerLink="/editexp/{{Experience.id}}" type="button" class="boton-edit"><i

@@ -4,12 +4,13 @@ import { Observable } from 'rxjs';
 import { JwtDto } from '../model/jwt-dto';
 import { LoginUsuario } from '../model/login-usuario';
 import { NuevoUsuario } from '../model/nuevo-usuario';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = 'https://argprogmurua.herokuapp.com/auth/';
+  authURL = 'http://localhost:8080/auth/';
 
   constructor(private httpClient: HttpClient) { }
 

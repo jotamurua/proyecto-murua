@@ -1,7 +1,11 @@
-<section class="exp-container">
-  <h5> Educación</h5>
-  <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged"> Agregar educ</button>
-  <article class="exp-article" *ngFor="let Education of educacion">
+<section class="educ-container">
+  <div class="section-header">
+    <h5> Educación</h5>
+    <button type="button" class="" routerLink="/nuevaedu" *ngIf="isLogged"> <i
+        class="fa-solid fa-plus"></i></button>
+  </div>
+
+  <article class="educ-article" *ngFor="let Education of educacion">
     <div class="icons-editdelete" *ngIf="isLogged">
       <a><button routerLink="/editedu/{{Education.id}}" type="button" class="boton-edit"><i
             class="fa-solid fa-pen"></i></button></a>
