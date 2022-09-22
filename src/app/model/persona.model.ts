@@ -1,14 +1,14 @@
 export class persona{
   id?: number;
-  nombre: String;
-  apellido: String;
-  img: String;
-  banner: String;
-  titulo: String;
-  ubicacion: String;
-  acercade: String;
+  nombre: string;
+  apellido: string;
+  img: string;
+  banner: string;
+  titulo: string;
+  ubicacion: string;
+  acercade: string;
 
-  constructor (nombre: String, apellido: String, img: String, banner: String, titulo: String, ubicacion: String, acercade: String){
+  constructor (nombre: string, apellido: string, img: string, banner: string, titulo: string, ubicacion: string, acercade: string){
     this.nombre = nombre;
     this.apellido = apellido;
     this.img = img;

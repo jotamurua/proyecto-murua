@@ -1,0 +1,8 @@
+
+.modal-content{
+  position: absolute;
+  background-color: white;
+  padding: 15px;
+  border: black 2px solid;
+  border-radius: 15px;
+}

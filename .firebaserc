@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "frontendargprog-8b1ad"
+  },
+  "targets": {
+    "frontendargprog-8b1ad": {
+      "hosting": {
+        "proyecto-murua": [
+          "frontendargprog-8b1ad"
+        ]
+      }
+    }
   }
 }

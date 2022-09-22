@@ -29,8 +29,12 @@
   margin: 5px;
 }
 
-@media screen and (max-width: 650px) {
-  .img-proj {
-    max-width: 75px;
-  }
+
+
+.fa-solid, .fa-brands {
+  margin: 10px;
 }
+
+
+
+

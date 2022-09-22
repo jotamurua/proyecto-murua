@@ -1,0 +1,42 @@
+<div class="container" *ngIf="persona" >
+  <div class="row">
+    <div>
+      <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+        <div class="form-grop">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
+        </div>
+        <div class="form-grop">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
+        </div>
+        <div class="form-grop">
+          <label for="titulo">Titulo</label>
+          <input type="text" class="form-control" id="titulo" name="titulo" [(ngModel)]="persona.titulo" required>
+        </div>
+        <div class="form-grop">
+          <label for="ubicacion">Ubicacion</label>
+          <input type="text" class="form-control" id="ubicacion" name="ubicacion" [(ngModel)]="persona.ubicacion" required>
+        </div>
+        <div class="form-grop">
+          <label for="acercade">Acerca de vos</label>
+          <input type="text" class="form-control" id="acercade" name="acercade" [(ngModel)]="persona.acercade" required>
+        </div>
+
+        <!-- <div class="form-grop">
+          <label for="img">Fotoperfil</label>
+          <input type="file" (change)="uploadImage($event)">
+          <input type="text" class="form-control" id="img" name="img" [(ngModel)]="url"  required>
+        </div>
+        <div class="form-grop">
+          <label for="banner">Fotobanner</label>
+          <input type="file" >
+          <input type="text" class="form-control" id="banner" name="banner" [(ngModel)]="banurl" required>
+        </div> -->
+        <button class="btn btn-primary" >
+          Editar Perfil
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

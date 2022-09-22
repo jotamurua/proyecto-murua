@@ -1,0 +1,23 @@
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modificar Foto de Perfil</h5>
+      </div>
+      <div class="modal-body">
+        <p>Selecciona un archivo o ingresa una URL</p>
+        <div class="form-grop">
+          <input type="file" (change)="uploadImage($event)" >
+          <input type="text" class="form-control" id="img" name="img" [(ngModel)]="persona.img" required>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="onUpdate()">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"(click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+
+
+

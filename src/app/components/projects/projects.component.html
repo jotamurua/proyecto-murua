@@ -1,19 +1,19 @@
 <section class="proj-container">
-  <h5> Proyectos</h5>
-  <article class="proj-article" *ngFor="let project of projectsArticle">
-    <div class="icons-editdelete">
-      <a><button type="button" class="boton-edit"><i class="fa-solid fa-pen"></i></button></a>
-      <a><button type="button" class="boton-delete"><i class="fa-solid fa-trash-can"></i></button></a>
+  <div class="section-header">
+    <h5> Proyectos</h5>
+    <button type="button" class="" routerLink="/nuevoproy" *ngIf="isLogged"> <i
+        class="fa-solid fa-plus"></i></button>
+  </div>
+  <article class="proj-article" *ngFor="let proyect of proyectos">
+    <div class="icons-editdelete" *ngIf="isLogged">
+      <button type="button" class="boton-edit"><i class="fa-solid fa-pen" routerLink="/editproy/{{proyect.id}}"></i></button>
+      <button type="button" class="boton-delete" (click)="borrar(proyect.id)"><i class="fa-solid fa-trash-can"></i></button>
     </div>
     <div class="proj-data" >
-      <h6>{{project.title}}</h6>
-      <p> from {{project.timelapseFrom}} to {{project.timelapseTo}}</p>
-      <p>{{project.description}}</p>
-      <a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener noreferrer"><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-brands fa-github"></i></button></a>
-      <a *ngIf="project.deploy" [href]="project.deploy" target="_blank" rel="noopener noreferrer"><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-solid fa-globe"></i></button></a>
+      <h6>{{proyect.nombre}}</h6>
+      <p>{{proyect.descripcion}}</p>
+      <a *ngIf="proyect.linkdeploy" [href]="proyect.linkdeploy" target="_blank" rel="noopener noreferrer"><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-brands fa-github"></i></button></a>
+      <a *ngIf="proyect.linkgithub" [href]="proyect.linkgithub" target="_blank" rel="noopener noreferrer"><button type="button" class="proj-button btn btn-outline-secondary"><i class="fa-solid fa-globe"></i></button></a>
     </div>
-    <img
-      [src]="project.img"
-      alt="logo" class="img-proj img-fluid img-responsive" />
   </article>
 </section>

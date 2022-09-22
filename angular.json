@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "proyecto-murua:build:production",
+            "firebaseProject": "frontendargprog-8b1ad",
+            "firebaseHostingSite": "frontendargprog-8b1ad"
+          }
         }
       }
     }

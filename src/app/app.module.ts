@@ -21,6 +21,14 @@ import { NewEducationComponent } from './components/education/neweducation.compo
 import { NewExperienciaComponent } from './components/experience/new-experiencia.component';
 import { EditSkillComponent } from './components/skills/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill.component';
+import { EditprofileComponent } from './components/profile/editprofile.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { PerfilmodalComponent } from './components/profile/perfilmodal.component';
+import { BannermodalComponent } from './components/profile/bannermodal.component';
+import { NewproyectoComponent } from './components/projects/newproyecto.component';
+import { EditproyectoComponent } from './components/projects/editproyecto.component';
 
 @NgModule({
   declarations: [
@@ -39,14 +47,21 @@ import { NewSkillComponent } from './components/skills/new-skill.component';
     EditeducationComponent,
     NewExperienciaComponent,
     EditSkillComponent,
-    NewSkillComponent
+    NewSkillComponent,
+    EditprofileComponent,
+    PerfilmodalComponent,
+    BannermodalComponent,
+    NewproyectoComponent,
+    EditproyectoComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider
