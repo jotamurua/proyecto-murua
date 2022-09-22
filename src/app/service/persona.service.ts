@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'http://localhost:8080/perfil/';
+  URL = 'https://argprogmurua.herokuapp.com/perfil/';
   constructor(private http: HttpClient) { }
 
   public getPersona(): Observable<persona> {

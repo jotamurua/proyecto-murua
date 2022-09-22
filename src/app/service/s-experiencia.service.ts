@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  URL = 'http://localhost:8080/explab/'
+  URL = 'https://argprogmurua.herokuapp.com/explab/'
 
   constructor(private httpClient: HttpClient) {  }
 
